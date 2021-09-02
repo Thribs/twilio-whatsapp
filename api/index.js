@@ -21,4 +21,12 @@ app.get('/sms', (req, res) => {
   res.end(twiml.toString());
 });
 
+const test = (req, res) => {
+  res.json({
+    body: req.body,
+    query: req.query,
+    cookies: req.cookies
+  });
+};
+
 module.exports = app;
