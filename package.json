@@ -4,7 +4,7 @@
   "description": "A sample twilio project to handle WhatsApp messages",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "author": "Thiago Ribeiro Silva",
   "license": "ISC",
