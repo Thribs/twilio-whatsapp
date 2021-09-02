@@ -12,12 +12,13 @@ app.post('/sms', (req, res) => {
   res.end(twiml.toString());
 });
 
-app.get('test', (req, res) => {
-  res.json({
-    body: req.body,
-    query: req.query,
-    cookies: req.cookies
-  });
+app.get('/sms', (req, res) => {
+  const twiml = new MessagingResponse();
+
+  twiml.message("The robots are coming! Head for the hills!");
+
+  res.writeHead(200, {'Content-Type': 'text/xml'});
+  res.end(twiml.toString());
 });
 
 module.exports = app;
